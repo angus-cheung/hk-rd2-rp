@@ -370,30 +370,30 @@ end
 function MainMenu()
     MenuData.CloseAll()
     local elements = {{
-        label = "Body",
+        label = "身體",
         value = 'body',
-        desc = "Edit your body"
+        desc = "編輯身體"
     }, {
-        label = "Face",
+        label = "面部",
         value = 'face',
-        desc = "Edit your face"
+        desc = "編輯面部"
     }, {
-        label = "Hair / Beard",
+        label = "頭髮/鬍鬚",
         value = 'hair',
-        desc = "Edit your hair"
+        desc = "編輯頭髮/鬍鬚"
     }, {
-        label = "Makeup",
+        label = "妝容",
         value = 'makeup',
-        desc = "Edit your makeup"
+        desc = "編輯妝容"
     }, {
-        label = "Save",
+        label = "保存",
         value = 'save',
-        desc = "Save your character"
+        desc = "保存你的角色"
     }}
 
     MenuData.Open('default', GetCurrentResourceName(), 'main_character_creator_menu', {
-        title = 'Basic Appearance',
-        subtext = 'Settings',
+        title = '基本外觀',
+        subtext = '設置',
         align = 'top-left',
         elements = elements
     }, function(data, menu)
@@ -421,55 +421,55 @@ function OpenBodyMenu()
                              "<img src='nui://redemrp_creator/img/skin5.png' height='20'>",
                              "<img src='nui://redemrp_creator/img/skin6.png' height='20'>"}
     local elements = {{
-        label = "Face",
+        label = "面部",
         value = CreatorCache["head"] or 1,
         category = "head",
-        desc = "Change the look of your face",
+        desc = "調整的面部",
         type = "slider",
         min = 1,
         max = 120,
         hop = 6
     }, {
-        label = "Face Width",
+        label = "臉型寬度",
         value = CreatorCache["face_width"] or 0,
         category = "face_width",
-        desc = "Change the width of your face",
+        desc = "調整臉型寬度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Skin tone",
+        label = "膚色",
         value = CreatorCache["skin_tone"] or 1,
         category = "skin_tone",
-        desc = "Change your skin tone",
+        desc = "調整膚色",
         type = "slider",
         min = 1,
         max = 6,
         options = SkinToneOptions
     }, {
-        label = "Body Size",
+        label = "身型",
         value = CreatorCache["body_size"] or 3,
         category = "body_size",
-        desc = "Change your body size",
+        desc = "調整你的身型",
         type = "slider",
         min = 1,
         max = 5,
         options = BodySizeOptions
     }, {
-        label = "Waist Size",
+        label = "腰圍",
         value = CreatorCache["body_waist"] or 7,
         category = "body_waist",
-        desc = "Add pounds",
+        desc = "調整腰圍",
         type = "slider",
         min = 1,
         max = 21,
         options = BodyWaistOptions
     }, {
-        label = "Height",
+        label = "身高",
         value = CreatorCache["height"] or 94,
         category = "height",
-        desc = "Change height",
+        desc = "調整身高",
         type = "slider",
         min = 88,
         max = 106,
@@ -477,8 +477,8 @@ function OpenBodyMenu()
     }}
 
     MenuData.Open('default', GetCurrentResourceName(), 'body_character_creator_menu', {
-        title = 'Basic Appearance',
-        subtext = 'Settings',
+        title = '基本外觀',
+        subtext = '設置',
         align = 'top-left',
         elements = elements
     }, function(data, menu)
@@ -497,51 +497,51 @@ function OpenFaceMenu()
     MoveCharacterCreatorCamera(-558.97, -3780.95, 239.18)
     MenuData.CloseAll()
     local elements = {{
-        label = "Eyes",
+        label = "眼睛",
         value = 'eyes',
-        desc = "Edit eyes"
+        desc = "編輯眼睛"
     }, {
-        label = "Eyelids",
+        label = "眼皮",
         value = 'eyelids',
-        desc = "Edit eyelids"
+        desc = "編輯眼皮"
     }, {
-        label = "Eyebrows",
+        label = "眉毛",
         value = 'eyebrows',
-        desc = "Edit eyebrows"
+        desc = "編輯眉毛"
     }, {
-        label = "Nose",
+        label = "鼻",
         value = 'nose',
-        desc = "Edit nose"
+        desc = "編輯鼻形"
     }, {
-        label = "Mouth",
+        label = "嘴",
         value = 'mouth',
-        desc = "Edit mouth"
+        desc = "編輯嘴型"
     }, {
-        label = "Cheekbones",
+        label = "顴骨",
         value = 'cheekbones',
-        desc = "Edit cheekbones"
+        desc = "編輯顴骨"
     }, {
-        label = "Jaw",
+        label = "下顎",
         value = 'jaw',
-        desc = "Edit jaw"
+        desc = "編輯下顎"
     }, {
-        label = "Ears",
+        label = "耳",
         value = 'ears',
-        desc = "Edit ears"
+        desc = "編輯耳朵"
     }, {
-        label = "Chin",
+        label = "下巴",
         value = 'chin',
-        desc = "Edit chin"
+        desc = "編輯下巴"
     }, {
-        label = "Defects",
+        label = "臉部瑕疵",
         value = 'defects',
-        desc = "Edit defects"
+        desc = "編輯臉部瑕疵"
     }}
 
 
     MenuData.Open('default', GetCurrentResourceName(), 'face_main_character_creator_menu', {
-        title = 'Face',
-        subtext = 'Settings',
+        title = '臉部特征',
+        subtext = '設置',
         align = 'top-left',
         elements = elements
     }, function(data, menu)
@@ -574,17 +574,17 @@ function OpenHairMenu2(cb)
                 CreatorCache["beard"].model = 0
                 -- print(CreatorCache["beard"])
                 CreatorCache["beard"].texture = 1
-                
+
             end
             local options = {}
             for k, v in pairs(category) do
                 table.insert(options, "Styl " .. k)
             end
             table.insert(elements, {
-                label = "Hair",
+                label = "髮型",
                 value = CreatorCache["hair"].model or 0,
                 category = "hair",
-                desc = "Change component",
+                desc = "調整髮型",
                 type = "slider",
                 min = 0,
                 max = #category,
@@ -599,10 +599,10 @@ function OpenHairMenu2(cb)
                 table.insert(options, "Kolor " .. i)
             end
             table.insert(elements, {
-                label = "Hair color",
+                label = "頭髮顏色",
                 value = CreatorCache["hair"].texture or 1,
                 category = "hair",
-                desc = "Change the color",
+                desc = "調整頭髮顏色",
                 type = "slider",
                 min = 1,
                 max = GetMaxTexturesForModel("hair", CreatorCache["hair"].model or 1),
@@ -620,10 +620,10 @@ function OpenHairMenu2(cb)
                 table.insert(options, "Styl " .. k)
             end
             table.insert(elements, {
-                label = "Beard",
+                label = "鬍鬚",
                 value = CreatorCache["beard"].model or 0,
                 category = "beard",
-                desc = "Change component",
+                desc = "調整鬍鬚",
                 type = "slider",
                 min = 0,
                 max = #category,
@@ -638,10 +638,10 @@ function OpenHairMenu2(cb)
                 table.insert(options, "Color " .. i)
             end
             table.insert(elements, {
-                label = "Beard Color",
+                label = "鬍鬚顏色",
                 value = CreatorCache["beard"].texture or 1,
                 category = "beard",
-                desc = "Change the color",
+                desc = "調整鬍鬚顏色",
                 type = "slider",
                 min = 1,
                 max = GetMaxTexturesForModel("beard", CreatorCache["beard"].model or 1),
@@ -665,10 +665,10 @@ function OpenHairMenu2(cb)
             table.insert(options, k .. " Style")
         end
         table.insert(elements, {
-            label = "Hair",
+            label = "髮型",
             value = CreatorCache["hair"].model or 0,
             category = "hair",
-            desc = "Change component",
+            desc = "調整髮型",
             type = "slider",
             min = 0,
             max = #category,
@@ -683,10 +683,10 @@ function OpenHairMenu2(cb)
             table.insert(options, i .. " Color")
         end
         table.insert(elements, {
-            label = "Hair color",
+            label = "頭髮顏色",
             value = CreatorCache["hair"].texture or 1,
             category = "hair",
-            desc = "Change the color",
+            desc = "調整頭髮",
             type = "slider",
             min = 1,
             max = GetMaxTexturesForModel("hair", CreatorCache["hair"].model or 1),
@@ -700,13 +700,13 @@ function OpenHairMenu2(cb)
     end
 
     table.insert(elements,{
-        label = "Save",
+        label = "保存",
         value = "save",
-        desc = "Save your changes",
+        desc = "保存變更的設置",
     })
     MenuData.Open('default', GetCurrentResourceName(), 'hair_main_character_creator_menu2', {
-        title = 'Hair',
-        subtext = 'Settings',
+        title = '髮型',
+        subtext = '設置',
         align = 'top-left',
         elements = elements
     }, function(data, menu)
@@ -737,7 +737,7 @@ function OpenHairMenu2(cb)
                         end
                     else
                         table.insert(options, "None")
-    
+
                     end
                     menu.setElement(data.current.id + 1, "options", options)
                     menu.setElement(data.current.id + 1, "max",
@@ -745,13 +745,13 @@ function OpenHairMenu2(cb)
                     menu.setElement(data.current.id + 1, "min", 1)
                     menu.setElement(data.current.id + 1, "value", 1)
                     menu.refresh()
-    
+
                 else
                     menu.setElement(data.current.id + 1, "max", 0)
                     menu.setElement(data.current.id + 1, "min", 0)
                     menu.setElement(data.current.id + 1, "value", 0)
                     menu.refresh()
-    
+
                 end
                 HairFunctions[data.current.category](PlayerPedId(), CreatorCache)
             end
@@ -791,17 +791,17 @@ function OpenHairMenu()
                 CreatorCache["beard"].model = 0
                 -- print(CreatorCache["beard"])
                 CreatorCache["beard"].texture = 1
-                
+
             end
             local options = {}
             for k, v in pairs(category) do
                 table.insert(options, "Styl " .. k)
             end
             table.insert(elements, {
-                label = "Hair",
+                label = "髮型",
                 value = CreatorCache["hair"].model or 0,
                 category = "hair",
-                desc = "Change component",
+                desc = "調整髮型",
                 type = "slider",
                 min = 0,
                 max = #category,
@@ -816,10 +816,10 @@ function OpenHairMenu()
                 table.insert(options,i.." Color")
             end
             table.insert(elements, {
-                label = "Hair color",
+                label = "頭髮顏色",
                 value = CreatorCache["hair"].texture or 1,
                 category = "hair",
-                desc = "Change the color",
+                desc = "調整頭髮顏色",
                 type = "slider",
                 min = 1,
                 max = GetMaxTexturesForModel("hair", CreatorCache["hair"].model or 1),
@@ -837,10 +837,10 @@ function OpenHairMenu()
                 table.insert(options, k.." Style")
             end
             table.insert(elements, {
-                label = "Beard",
+                label = "鬍鬚",
                 value = CreatorCache["beard"].model or 0,
                 category = "beard",
-                desc = "Change component",
+                desc = "調整鬍鬚類型",
                 type = "slider",
                 min = 0,
                 max = #category,
@@ -855,10 +855,10 @@ function OpenHairMenu()
                 table.insert(options, "Color " .. i)
             end
             table.insert(elements, {
-                label = "Beard Color",
+                label = "鬍鬚顏色",
                 value = CreatorCache["beard"].texture or 1,
                 category = "beard",
-                desc = "Change the color",
+                desc = "調整鬍鬚顏色",
                 type = "slider",
                 min = 1,
                 max = GetMaxTexturesForModel("beard", CreatorCache["beard"].model or 1),
@@ -882,10 +882,10 @@ function OpenHairMenu()
             table.insert(options, "Styl " .. k)
         end
         table.insert(elements, {
-            label = "Hair",
+            label = "髮型",
             value = CreatorCache["hair"].model or 0,
             category = "hair",
-            desc = "Change component",
+            desc = "調整髮型",
             type = "slider",
             min = 0,
             max = #category,
@@ -900,10 +900,10 @@ function OpenHairMenu()
             table.insert(options, "Kolor " .. i)
         end
         table.insert(elements, {
-            label = "Hair color",
+            label = "頭髮顏色",
             value = CreatorCache["hair"].texture or 1,
             category = "hair",
-            desc = "Change the color",
+            desc = "調整頭髮顏色",
             type = "slider",
             min = 1,
             max = GetMaxTexturesForModel("hair", CreatorCache["hair"].model or 1),
@@ -916,8 +916,8 @@ function OpenHairMenu()
         a = a + 1
     end
     MenuData.Open('default', GetCurrentResourceName(), 'hair_main_character_creator_menu', {
-        title = 'Hair',
-        subtext = 'Settings',
+        title = '髮型',
+        subtext = '設置',
         align = 'top-left',
         elements = elements
     }, function(data, menu)
@@ -941,7 +941,7 @@ function OpenHairMenu()
                         end
                     else
                         table.insert(options, "None")
-    
+
                     end
                     menu.setElement(data.current.id + 1, "options", options)
                     menu.setElement(data.current.id + 1, "max",
@@ -949,13 +949,13 @@ function OpenHairMenu()
                     menu.setElement(data.current.id + 1, "min", 1)
                     menu.setElement(data.current.id + 1, "value", 1)
                     menu.refresh()
-    
+
                 else
                     menu.setElement(data.current.id + 1, "max", 0)
                     menu.setElement(data.current.id + 1, "min", 0)
                     menu.setElement(data.current.id + 1, "value", 0)
                     menu.refresh()
-    
+
                 end
                 HairFunctions[data.current.category](PlayerPedId(), CreatorCache)
             end
@@ -983,36 +983,36 @@ function OpenEyesMenu()
                               "<img src='nui://redemrp_creator/img/skin5.png' height='20'>",
                               "<img src='nui://redemrp_creator/img/skin6.png' height='20'>"}
     local elements = {{
-        label = "Color",
+        label = "眼睛顏色",
         value = CreatorCache["eyes_color"] or 1,
         category = "eyes_color",
-        desc = "Change the look",
+        desc = "調整眼睛顏色",
         type = "slider",
         min = 1,
         max = 18
     }, {
-        label = "Depth",
+        label = "眼睛深度",
         value = CreatorCache["eyes_depth"] or 0,
         category = "eyes_depth",
-        desc = "Change the look",
+        desc = "調整眼睛深度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Angle",
+        label = "眼睛角度",
         value = CreatorCache["eyes_angle"] or 0,
         category = "eyes_angle",
-        desc = "Change the look",
+        desc = "調整眼睛角度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Spacing",
+        label = "瞳距",
         value = CreatorCache["eyes_distance"] or 0,
         category = "eyes_distance",
-        desc = "Change the look",
+        desc = "調整瞳距",
         type = "slider",
         min = -100,
         max = 100,
@@ -1020,8 +1020,8 @@ function OpenEyesMenu()
     }}
 
     MenuData.Open('default', GetCurrentResourceName(), 'eyes_character_creator_menu', {
-        title = 'Eyes',
-        subtext = 'Settings',
+        title = '眼睛',
+        subtext = '設置',
         align = 'top-left',
         elements = elements
     }, function(data, menu)
@@ -1038,19 +1038,19 @@ end
 function OpenEyelidsMenu()
     MenuData.CloseAll()
     local elements = {{
-        label = "Height",
+        label = "眼瞼高度",
         value = CreatorCache["eyelid_height"] or 0,
         category = "eyelid_height",
-        desc = "Change the look",
+        desc = "調整眼瞼高度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Width",
+        label = "眼瞼寬度",
         value = CreatorCache["eyelid_width"] or 0,
         category = "eyelid_width",
-        desc = "Change the look",
+        desc = "調整眼瞼寬度",
         type = "slider",
         min = -100,
         max = 100,
@@ -1058,8 +1058,8 @@ function OpenEyelidsMenu()
     }}
 
     MenuData.Open('default', GetCurrentResourceName(), 'eyelid_character_creator_menu', {
-        title = 'Eyelids',
-        subtext = 'Settings',
+        title = '眼瞼',
+        subtext = '設置',
         align = 'top-left',
         elements = elements
     }, function(data, menu)
@@ -1076,70 +1076,70 @@ end
 function OpenEyebrowsMenu()
     MenuData.CloseAll()
     local elements = {{
-        label = "Height",
+        label = "眉毛高度",
         value = CreatorCache["eyebrow_height"] or 0,
         category = "eyebrow_height",
-        desc = "Change the look",
+        desc = "調整眉毛高度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Width",
+        label = "眉毛寬度",
         value = CreatorCache["eyebrow_width"] or 0,
         category = "eyebrow_width",
-        desc = "Change the look",
+        desc = "調整眉毛寬度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Depth",
+        label = "眉毛深度",
         value = CreatorCache["eyebrow_depth"] or 0,
         category = "eyebrow_depth",
-        desc = "Change the look",
+        desc = "調整眉毛深度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Type",
+        label = "眉毛類型",
         value = CreatorCache["eyebrows_t"] or 1,
         category = "eyebrows_t",
-        desc = "Change the look",
+        desc = "調整眉毛類型",
         type = "slider",
         min = 1,
         max = 15
     }, {
-        label = "Visibility",
+        label = "眉毛可見度",
         value = CreatorCache["eyebrows_op"] or 100,
         category = "eyebrows_op",
-        desc = "Change the look",
+        desc = "調整眉毛可見度",
         type = "slider",
         min = 0,
         max = 100,
         hop = 5
     }, {
-        label = "Color palette",
+        label = "眉毛顏色",
         value = CreatorCache["eyebrows_id"] or 10,
         category = "eyebrows_id",
-        desc = "Change the look",
+        desc = "調整眉毛顏色",
         type = "slider",
         min = 1,
         max = 25
     }, {
-        label = "Primary color",
+        label = "眉毛主要顏色",
         value = CreatorCache["eyebrows_c1"] or 0,
         category = "eyebrows_c1",
-        desc = "Change the look",
+        desc = "調整眉毛主要顏色",
         type = "slider",
         min = 0,
         max = 64
     }}
 
     MenuData.Open('default', GetCurrentResourceName(), 'eyebrows_character_creator_menu', {
-        title = 'Eyebrows',
-        subtext = 'Settings',
+        title = '眉毛',
+        subtext = '設置',
         align = 'top-left',
         elements = elements
     }, function(data, menu)
@@ -1156,55 +1156,55 @@ end
 function OpenNoseMenu()
     MenuData.CloseAll()
     local elements = {{
-        label = "Width",
+        label = "鼻型寬度",
         value = CreatorCache["nose_width"] or 0,
         category = "nose_width",
-        desc = "Change the look",
+        desc = "調整鼻型寬度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Size",
+        label = "鼻型尺寸",
         value = CreatorCache["nose_size"] or 0,
         category = "nose_size",
-        desc = "Change the look",
+        desc = "調整鼻型尺寸",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Height",
+        label = "鼻型高度",
         value = CreatorCache["nose_height"] or 0,
         category = "nose_height",
-        desc = "Change the look",
+        desc = "調整鼻型高度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Angle",
+        label = "鼻型角度",
         value = CreatorCache["nose_angle"] or 0,
         category = "nose_angle",
-        desc = "Change the look",
+        desc = "調整鼻型角度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Curvature",
+        label = "鼻型彎曲",
         value = CreatorCache["nose_curvature"] or 0,
         category = "nose_curvature",
-        desc = "Change the look",
+        desc = "調整鼻型彎曲",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Nostrils Distance",
+        label = "鼻孔距離",
         value = CreatorCache["nostrils_distance"] or 0,
         category = "nostrils_distance",
-        desc = "Change the look",
+        desc = "調整鼻孔距離",
         type = "slider",
         min = -100,
         max = 100,
@@ -1212,8 +1212,8 @@ function OpenNoseMenu()
     }}
 
     MenuData.Open('default', GetCurrentResourceName(), 'nose_character_creator_menu', {
-        title = 'Nose',
-        subtext = 'Settings',
+        title = '鼻型',
+        subtext = '設置',
         align = 'top-left',
         elements = elements
     }, function(data, menu)
@@ -1230,91 +1230,91 @@ end
 function OpenMouthMenu()
     MenuData.CloseAll()
     local elements = {{
-        label = "Width",
+        label = "嘴型寬度",
         value = CreatorCache["mouth_width"] or 0,
         category = "mouth_width",
-        desc = "Change the look",
+        desc = "調整嘴型寬度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Depth",
+        label = "嘴型深度",
         value = CreatorCache["mouth_depth"] or 0,
         category = "mouth_depth",
-        desc = "Change the look",
+        desc = "調整嘴型深度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Up / Down",
+        label = "嘴型上下位置",
         value = CreatorCache["mouth_x_pos"] or 0,
         category = "mouth_x_pos",
-        desc = "Change the look",
+        desc = "調整嘴型上下位置",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Left / Right",
+        label = "嘴型左右位置",
         value = CreatorCache["mouth_y_pos"] or 0,
         category = "mouth_y_pos",
-        desc = "Change the look",
+        desc = "調整嘴型左右位置",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Upper Lip Height",
+        label = "上唇高度",
         value = CreatorCache["upper_lip_height"] or 0,
         category = "upper_lip_height",
-        desc = "Change the look",
+        desc = "調整上唇高度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Upper Lip Width",
+        label = "上唇高度",
         value = CreatorCache["upper_lip_width"] or 0,
         category = "upper_lip_width",
-        desc = "Change the look",
+        desc = "調整上唇高度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Upper Lip Depth",
+        label = "上唇深度",
         value = CreatorCache["upper_lip_depth"] or 0,
         category = "upper_lip_depth",
-        desc = "Change the look",
+        desc = "調整上唇深度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Lower Lip Height",
+        label = "下唇高度",
         value = CreatorCache["lower_lip_height"] or 0,
         category = "lower_lip_height",
-        desc = "Change the look",
+        desc = "調整下唇高度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Lower Lip Width",
+        label = "下唇寬度",
         value = CreatorCache["lower_lip_width"] or 0,
         category = "lower_lip_width",
-        desc = "Change the look",
+        desc = "調整下唇寬度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Lower Lip Depth",
+        label = "下唇深度",
         value = CreatorCache["lower_lip_depth"] or 0,
         category = "lower_lip_depth",
-        desc = "Change the look",
+        desc = "調整下唇深度",
         type = "slider",
         min = -100,
         max = 100,
@@ -1322,8 +1322,8 @@ function OpenMouthMenu()
     }}
 
     MenuData.Open('default', GetCurrentResourceName(), 'mouth_character_creator_menu', {
-        title = 'Mouth',
-        subtext = 'Settings',
+        title = '嘴型',
+        subtext = '設置',
         align = 'top-left',
         elements = elements
     }, function(data, menu)
@@ -1340,28 +1340,28 @@ end
 function OpenCheekbonesMenu()
     MenuData.CloseAll()
     local elements = {{
-        label = "Height",
+        label = "顴骨高度",
         value = CreatorCache["cheekbones_height"] or 0,
         category = "cheekbones_height",
-        desc = "Change the look",
+        desc = "調整顴骨高度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Width",
+        label = "顴骨寬度",
         value = CreatorCache["cheekbones_width"] or 0,
         category = "cheekbones_width",
-        desc = "Change the look",
+        desc = "調整顴骨寬度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Depth",
+        label = "顴骨深度",
         value = CreatorCache["cheekbones_depth"] or 0,
         category = "cheekbones_depth",
-        desc = "Change the look",
+        desc = "改變顴骨深度",
         type = "slider",
         min = -100,
         max = 100,
@@ -1369,8 +1369,8 @@ function OpenCheekbonesMenu()
     }}
 
     MenuData.Open('default', GetCurrentResourceName(), 'cheekbones_character_creator_menu', {
-        title = 'Cheekbones',
-        subtext = 'Settings',
+        title = '顴骨',
+        subtext = '設置',
         align = 'top-left',
         elements = elements
     }, function(data, menu)
@@ -1387,28 +1387,28 @@ end
 function OpenJawMenu()
     MenuData.CloseAll()
     local elements = {{
-        label = "Height",
+        label = "下顎高度",
         value = CreatorCache["jaw_height"] or 0,
         category = "jaw_height",
-        desc = "Change the look",
+        desc = "調整下顎高度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Width",
+        label = "下顎寬度",
         value = CreatorCache["jaw_width"] or 0,
         category = "jaw_width",
-        desc = "Change the look",
+        desc = "調整下顎寬度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Depth",
+        label = "下顎深度",
         value = CreatorCache["jaw_depth"] or 0,
         category = "jaw_depth",
-        desc = "Change the look",
+        desc = "調整下顎深度",
         type = "slider",
         min = -100,
         max = 100,
@@ -1416,8 +1416,8 @@ function OpenJawMenu()
     }}
 
     MenuData.Open('default', GetCurrentResourceName(), 'jaw_character_creator_menu', {
-        title = 'Jaw',
-        subtext = 'Settings',
+        title = '下顎',
+        subtext = '設置',
         align = 'top-left',
         elements = elements
     }, function(data, menu)
@@ -1434,37 +1434,37 @@ end
 function OpenEarsMenu()
     MenuData.CloseAll()
     local elements = {{
-        label = "Width",
+        label = "耳朵寬度",
         value = CreatorCache["ears_width"] or 0,
         category = "ears_width",
-        desc = "Change the look",
+        desc = "調整耳朵寬度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Angle",
+        label = "耳朵角度",
         value = CreatorCache["ears_angle"] or 0,
         category = "ears_angle",
-        desc = "Change the look",
+        desc = "調整耳朵角度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Height",
+        label = "耳朵高度",
         value = CreatorCache["ears_height"] or 0,
         category = "ears_height",
-        desc = "Change the look",
+        desc = "調整耳朵寬度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Size",
+        label = "耳朵尺寸",
         value = CreatorCache["earlobe_size"] or 0,
         category = "earlobe_size",
-        desc = "Change the look",
+        desc = "調整耳朵尺寸",
         type = "slider",
         min = -100,
         max = 100,
@@ -1472,8 +1472,8 @@ function OpenEarsMenu()
     }}
 
     MenuData.Open('default', GetCurrentResourceName(), 'ears_character_creator_menu', {
-        title = 'Ears',
-        subtext = 'Settings',
+        title = '耳朵',
+        subtext = '設置',
         align = 'top-left',
         elements = elements
     }, function(data, menu)
@@ -1490,28 +1490,28 @@ end
 function OpenChinMenu()
     MenuData.CloseAll()
     local elements = {{
-        label = "Height",
+        label = "下巴高度",
         value = CreatorCache["chin_height"] or 0,
         category = "chin_height",
-        desc = "Change the look",
+        desc = "調整下巴高度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Width",
+        label = "下巴寬度",
         value = CreatorCache["chin_width"] or 0,
         category = "chin_width",
-        desc = "Change the look",
+        desc = "調整下巴寬度",
         type = "slider",
         min = -100,
         max = 100,
         hop = 5
     }, {
-        label = "Depth",
+        label = "下巴深度",
         value = CreatorCache["chin_depth"] or 0,
         category = "chin_depth",
-        desc = "Change the look",
+        desc = "調整下巴深度",
         type = "slider",
         min = -100,
         max = 100,
@@ -1519,8 +1519,8 @@ function OpenChinMenu()
     }}
 
     MenuData.Open('default', GetCurrentResourceName(), 'chin_character_creator_menu', {
-        title = 'Chin',
-        subtext = 'Settings',
+        title = '下巴',
+        subtext = '設置',
         align = 'top-left',
         elements = elements
     }, function(data, menu)
@@ -1537,91 +1537,91 @@ end
 function OpenDefectsMenu()
     MenuData.CloseAll()
     local elements = {{
-        label = "Scar Type",
+        label = "傷痕特征",
         value = CreatorCache["scars_t"] or 1,
         category = "scars_t",
-        desc = "Change the look",
+        desc = "調整傷痕特征",
         type = "slider",
         min = 1,
         max = 16,
         options = nil
     }, {
-        label = "Scar Visibility",
+        label = "傷痕可見度",
         value = CreatorCache["scars_op"] or 0,
         category = "scars_op",
-        desc = "Change the look",
+        desc = "調整傷痕可見度",
         type = "slider",
         min = 0,
         max = 100,
         hop = 5
     }, {
-        label = "Aging Type",
+        label = "老化特征",
         value = CreatorCache["ageing_t"] or 1,
         category = "ageing_t",
-        desc = "Change the look",
+        desc = "調整老化特征",
         type = "slider",
         min = 1,
         max = 24,
         options = nil
     }, {
-        label = "Aging Visibility",
+        label = "老化可見度",
         value = CreatorCache["ageing_op"] or 0,
         category = "ageing_op",
-        desc = "Change the look",
+        desc = "調整老化可見度",
         type = "slider",
         min = 0,
         max = 100,
         hop = 5
     }, {
-        label = "Freckles Type",
+        label = "雀斑特征",
         value = CreatorCache["freckles_t"] or 1,
         category = "freckles_t",
-        desc = "Change the look",
+        desc = "調整雀斑特征",
         type = "slider",
         min = 1,
         max = 15,
         options = nil
     }, {
-        label = "Freckles Visibility",
+        label = "雀斑可見度",
         value = CreatorCache["freckles_op"] or 0,
         category = "freckles_op",
-        desc = "Change the look",
+        desc = "調整雀斑可見度",
         type = "slider",
         min = 0,
         max = 100,
         hop = 5
     }, {
-        label = "Moles Type",
+        label = "痣癦",
         value = CreatorCache["moles_t"] or 1,
         category = "moles_t",
-        desc = "Change the look",
+        desc = "調整痣癦",
         type = "slider",
         min = 1,
         max = 16,
         options = nil
     }, {
-        label = "Moles Visibility",
+        label = "痣癦可見度",
         value = CreatorCache["moles_op"] or 0,
         category = "moles_op",
-        desc = "Change the look",
+        desc = "調整痣癦可見度",
         type = "slider",
         min = 0,
         max = 100,
         hop = 5
     }, {
-        label = "Spots Type",
+        label = "斑點特征",
         value = CreatorCache["spots_t"] or 1,
         category = "spots_t",
-        desc = "Change the look",
+        desc = "調整斑點特征",
         type = "slider",
         min = 1,
         max = 16,
         options = nil
     }, {
-        label = "Spot Visiblity",
+        label = "斑點可見度",
         value = CreatorCache["spots_op"] or 0,
         category = "spots_op",
-        desc = "Change the look",
+        desc = "調整斑點可見度",
         type = "slider",
         min = 0,
         max = 100,
@@ -1629,8 +1629,8 @@ function OpenDefectsMenu()
     }}
 
     MenuData.Open('default', GetCurrentResourceName(), 'defects_character_creator_menu', {
-        title = 'Defects',
-        subtext = 'Settings',
+        title = '瑕疵',
+        subtext = '設置',
         align = 'top-left',
         elements = elements
     }, function(data, menu)
@@ -1648,150 +1648,150 @@ function OpenMakeupMenu()
     MoveCharacterCreatorCamera(-558.97, -3780.95, 239.18)
     MenuData.CloseAll()
     local elements = {{
-        label = "Shadow Types",
+        label = "眼影類型",
         value = CreatorCache["shadows_t"] or 1,
         category = "shadows_t",
-        desc = "Change the look",
+        desc = "調整眼影類型",
         type = "slider",
         min = 1,
         max = 5
     }, {
-        label = "Shadow Visibility",
+        label = "眼影可見度",
         value = CreatorCache["shadows_op"] or 0,
         category = "shadows_op",
-        desc = "Change the look",
+        desc = "調整眼影可見度",
         type = "slider",
         min = 0,
         max = 100,
         hop = 5
     }, {
-        label = "Shadow color palette",
+        label = "眼影顏色",
         value = CreatorCache["shadows_id"] or 1,
         category = "shadows_id",
-        desc = "Change the look",
+        desc = "調整眼影顏色",
         type = "slider",
         min = 1,
         max = 25
     }, {
-        label = "Primary color of shadows",
+        label = "眼影主要顏色",
         value = CreatorCache["shadows_c1"] or 0,
         category = "shadows_c1",
-        desc = "Change the look",
+        desc = "調整眼影主要顏色",
         type = "slider",
         min = 0,
         max = 64
     }, {
-        label = "Blush Type",
+        label = "腮紅類型",
         value = CreatorCache["blush_t"] or 1,
         category = "blush_t",
-        desc = "Change the look",
+        desc = "調整腮紅類型",
         type = "slider",
         min = 1,
         max = 4
     }, {
-        label = "Blush Visiblity",
+        label = "腮紅可見度",
         value = CreatorCache["blush_op"] or 0,
         category = "blush_op",
-        desc = "Change the look",
+        desc = "調整腮紅可見度",
         type = "slider",
         min = 0,
         max = 100,
         hop = 5
     }, {
-        label = "Blush Color Palette",
+        label = "腮紅顏色",
         value = CreatorCache["blush_id"] or 1,
         category = "blush_id",
-        desc = "Change the look",
+        desc = "調整腮紅顏色",
         type = "slider",
         min = 1,
         max = 25
     }, {
-        label = "Blush Primary Color",
+        label = "腮紅主要顏色",
         value = CreatorCache["blush_c1"] or 0,
         category = "blush_c1",
-        desc = "Change the look",
+        desc = "調整腮紅主要顏色",
         type = "slider",
         min = 0,
         max = 64
     }, {
-        label = "Lipstick Type",
+        label = "口紅特征",
         value = CreatorCache["lipsticks_t"] or 1,
         category = "lipsticks_t",
-        desc = "Change the look",
+        desc = "調整口紅特征",
         type = "slider",
         min = 1,
         max = 7
     }, {
-        label = "Lipstick Visibility",
+        label = "口紅可見度",
         value = CreatorCache["lipsticks_op"] or 0,
         category = "lipsticks_op",
-        desc = "Change the look",
+        desc = "調整口紅可見度",
         type = "slider",
         min = 0,
         max = 100,
         hop = 5
     }, {
-        label = "Lipstick color palette",
+        label = "口紅顏色",
         value = CreatorCache["lipsticks_id"] or 1,
         category = "lipsticks_id",
-        desc = "Change the look",
+        desc = "調整口紅顏色",
         type = "slider",
         min = 1,
         max = 25
     }, {
-        label = "Primary color of lipstick",
+        label = "口紅主要顏色",
         value = CreatorCache["lipsticks_c1"] or 0,
         category = "lipsticks_c1",
-        desc = "Change the look",
+        desc = "調整口紅主要顏色",
         type = "slider",
         min = 0,
         max = 64
     }, {
-        label = "Secondary color of lipstick",
+        label = "口紅次要顏色",
         value = CreatorCache["lipsticks_c2"] or 0,
         category = "lipsticks_c2",
-        desc = "Change the look",
+        desc = "調整口紅次要顏色",
         type = "slider",
         min = 0,
         max = 64
     }, {
-        label = "Eyeliner Type",
+        label = "眼線類型",
         value = CreatorCache["eyeliners_t"] or 1,
         category = "eyeliners_t",
-        desc = "Change the look",
+        desc = "調整眼線類型",
         type = "slider",
         min = 1,
         max = 15
     }, {
-        label = "Eyeliner Visibility",
+        label = "眼線可見度",
         value = CreatorCache["eyeliners_op"] or 0,
         category = "eyeliners_op",
-        desc = "Change the look",
+        desc = "調整眼線可見度",
         type = "slider",
         min = 0,
         max = 100,
         hop = 5
     }, {
-        label = "Eyeliner color palette",
+        label = "眼線顏色",
         value = CreatorCache["eyeliners_id"] or 1,
         category = "eyeliners_id",
-        desc = "Change the look",
+        desc = "調整眼線顏色",
         type = "slider",
         min = 1,
         max = 25
     }, {
-        label = "Primary color of eyeliner",
+        label = "眼線主要顏色",
         value = CreatorCache["eyeliners_c1"] or 0,
         category = "eyeliners_c1",
-        desc = "Change the look",
+        desc = "調整眼線主要顏色",
         type = "slider",
         min = 0,
         max = 64
     }}
 
     MenuData.Open('default', GetCurrentResourceName(), 'makeup_character_creator_menu', {
-        title = 'Makeup',
-        subtext = 'Settings',
+        title = '妝容',
+        subtext = '設置',
         align = 'top-left',
         elements = elements
     }, function(data, menu)
