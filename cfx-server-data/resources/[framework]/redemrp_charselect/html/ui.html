@@ -44,7 +44,7 @@
 
 	<div class="bg" id="loading">
 		<div class="loading">
-			<div class="loadingtext">唐仔街 RP 2023 技術支持: <span style="color:#cf2e2e"> REDEM:RP </span></div>
+			<div class="loadingtext">唐仔街 RP 2023 技術支持 <span style="color:#cf2e2e"> REDEM:RP </span></div>
 			<div class="loadingsubtext"><span id="version"></span><br/><span id="loadingtext">加載角色數據...</span></div>
 		</div>
 	</div>
@@ -71,7 +71,7 @@
 		$("#creator").fadeOut();
 		window.addEventListener("message", function (event) {
 			if (event.data.version) {
-				$("#version").html("version " + event.data.version);
+				$("#version").html("版本 " + event.data.version);
 				$("#version2").html(event.data.version);
 				setTimeout(function () {
 					$("#loadingtext").empty();
