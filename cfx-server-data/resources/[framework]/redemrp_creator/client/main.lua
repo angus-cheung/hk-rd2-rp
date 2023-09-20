@@ -374,9 +374,9 @@ function MainMenu()
         value = 'body',
         desc = "編輯身體"
     }, {
-        label = "面部",
+        label = "臉部",
         value = 'face',
-        desc = "編輯面部"
+        desc = "編輯臉部"
     }, {
         label = "頭髮/鬍鬚",
         value = 'hair',
@@ -404,10 +404,10 @@ end
 
 function OpenBodyMenu()
     MenuData.CloseAll()
-    local BodySizeOptions = {"Skinny", "Athletic", "Average", "Heavy", "Burly"}
+    local BodySizeOptions = {"1", "2", "3", "4", "5"}
     local BodyWaistOptions = {}
     for i, v in ipairs(WAIST_TYPES) do
-        table.insert(BodyWaistOptions, "+ " .. (i / 2) .. " kg")
+        table.insert(BodyWaistOptions, "" .. (i / 2) .. "")
     end
 
     local HeightOptions = {}
@@ -421,10 +421,10 @@ function OpenBodyMenu()
                              "<img src='nui://redemrp_creator/img/skin5.png' height='20'>",
                              "<img src='nui://redemrp_creator/img/skin6.png' height='20'>"}
     local elements = {{
-        label = "面部",
+        label = "臉部",
         value = CreatorCache["head"] or 1,
         category = "head",
-        desc = "調整的面部",
+        desc = "調整的臉部",
         type = "slider",
         min = 1,
         max = 120,
@@ -449,7 +449,7 @@ function OpenBodyMenu()
         options = SkinToneOptions
     }, {
         label = "身型",
-        value = CreatorCache["body_size"] or 3,
+        value = CreatorCache["body_size"] or 1,
         category = "body_size",
         desc = "調整你的身型",
         type = "slider",
