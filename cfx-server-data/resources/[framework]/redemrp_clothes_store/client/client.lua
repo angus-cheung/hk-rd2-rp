@@ -534,9 +534,9 @@ function Outfits()
 
     MenuData.Open('default', GetCurrentResourceName(), 'outfits_menu', {
 
-        title = 'Wardrobe',
+        title = '衣櫃',
 
-        subtext = 'Choose your outfit',
+        subtext = '選擇你的套裝',
 
         align = 'top-left',
 
@@ -552,22 +552,22 @@ function Outfits()
 
 end
 local elements_outfits_manage = {{
-    label = "Put on outfit",
+    label = "添加套裝",
     value = "SetOutfits",
-    desc = "Put on your outfit"
+    desc = "添加套裝"
 }, {
-    label = "Remove the outfit",
+    label = "移除套裝",
     value = "DeleteOutfit",
-    desc = "Remove your outfit"
+    desc = "移除套裝"
 }}
 function OutfitsManage(outfit)
 
     MenuData.CloseAll()
     MenuData.Open('default', GetCurrentResourceName(), 'outfits_menu_manage', {
 
-        title = 'Wardrobe',
+        title = '衣櫃',
 
-        subtext = 'Actions',
+        subtext = '衣櫃操作',
 
         align = 'top-left',
 
