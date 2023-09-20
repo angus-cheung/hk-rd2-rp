@@ -122,7 +122,7 @@ Config.Price = {
 
 Config.MenuElements = {
 	["head"] = {
-		label = "Head",
+		label = "頭部",
 		category = {
 			"hats",
 			"eyewear",
@@ -132,7 +132,7 @@ Config.MenuElements = {
 		}
 	},
 	["torso"] = {
-		label = "Torso",
+		label = "身體",
 		category = {
 			"cloaks",
 			"vests",
@@ -151,7 +151,7 @@ Config.MenuElements = {
 		}
 	},
 	["legs"] = {
-		label = "Legs",
+		label = "腿部",
 		category = {
 			"pants",
 			"chaps",
@@ -159,7 +159,7 @@ Config.MenuElements = {
 		}
 	},
 	["foot"] = {
-		label = "Boots",
+		label = "鞋子",
 		category = {
 			"boots",
 			"spats",
@@ -167,7 +167,7 @@ Config.MenuElements = {
 		}
 	},
 	["hands"] = {
-		label = "Hands",
+		label = "手部",
 		category = {
 			"jewelry_rings_right",
 			"jewelry_rings_left",
@@ -177,7 +177,7 @@ Config.MenuElements = {
 		}
 	},
 	["accessories"] = {
-		label = "Accessories",
+		label = "配件",
 		category = {
 			"accessories",
 			"talisman_wrist",

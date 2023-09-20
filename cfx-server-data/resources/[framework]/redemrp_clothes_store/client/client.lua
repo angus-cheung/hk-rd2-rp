@@ -21,21 +21,21 @@ function OpenClothingMenu()
             label = k.label or v,
             value = v,
             category = v,
-            desc = "Change component"
+            desc = "調整"
         })
     end
 
     table.insert(elements, {
-        label = Config.Label["save"] or "Save",
+        label = Config.Label["save"] or "保存",
         value = "save",
-        desc = "Save Clothes"
+        desc = "保存"
     })
 
     MenuData.Open('default', GetCurrentResourceName(), 'clothing_store_menu', {
 
-        title = 'Clothes',
+        title = '服裝',
 
-        subtext = 'Change Clothes',
+        subtext = '調整服裝',
 
         align = 'top-left',
 
@@ -93,7 +93,7 @@ function OpenCateogry(menu_catagory)
                 label = Config.Label[k].. " ($" .. Config.Price[k]..")" or v,
                 value = ClothesCache[k].model or 0,
                 category = k,
-                desc = "Change component",
+                desc = "調整",
                 type = "slider",
                 min = 0,
                 max = #category,
@@ -111,7 +111,7 @@ function OpenCateogry(menu_catagory)
                 label = Config.Label[k] .. " Color" or v,
                 value = ClothesCache[k].texture or 1,
                 category = k,
-                desc = "Change the color",
+                desc = "調整顏色",
                 type = "slider",
                 min = 1,
                 max = GetMaxTexturesForModel(k, ClothesCache[k].model or 1),
@@ -143,7 +143,7 @@ function OpenCateogry(menu_catagory)
                 label = Config.Label[k].. " ($" .. Config.Price[k]..")" or v,
                 value = ClothesCache[k].model or 0,
                 category = k,
-                desc = "Change component",
+                desc = "調整",
                 type = "slider",
                 min = 0,
                 max = #category,
@@ -161,7 +161,7 @@ function OpenCateogry(menu_catagory)
                 label = Config.Label[k] .. " Color" or v,
                 value = ClothesCache[k].texture or 1,
                 category = k,
-                desc = "Change the color",
+                desc = "調整顏色",
                 type = "slider",
                 min = 1,
                 max = GetMaxTexturesForModel(k, ClothesCache[k].model or 1),
@@ -178,9 +178,9 @@ function OpenCateogry(menu_catagory)
     end
     MenuData.Open('default', GetCurrentResourceName(), 'clothing_store_menu_category', {
 
-        title = 'Clothes',
+        title = '衣服',
 
-        subtext = 'Options',
+        subtext = '選項',
 
         align = 'top-left',
 
