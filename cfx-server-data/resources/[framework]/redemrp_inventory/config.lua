@@ -38,8 +38,8 @@ Config.Crafting = {
 
 Config.Items = {
     ["water"] = {
-        label = "Water",
-        description = "Some refreshing water to keep you hydrated",
+        label = "水",
+        description = "一些清涼的水，保持你的水分",
         weight = 0.01,
         canBeDropped = true,
         canBeUsed = true,
@@ -48,8 +48,8 @@ Config.Items = {
         type = "item_standard"
     },
     ["bandage"] = {
-        label = "Bandage",
-        description = "A bandage to heal wounds and restore health",
+        label = "繃帶",
+        description = "用來治療傷口並恢復健康的繃帶",
         weight = 0.2,
         canBeDropped = true,
         canBeUsed = true,
@@ -58,8 +58,8 @@ Config.Items = {
         type = "item_standard"
     },
     ["mbandage"] = {
-        label = "Medicated Bandage",
-        description = "A medicated bandage to heal wounds and restore health faster",
+        label = "藥膏繃帶",
+        description = "用來治療傷口並更快地恢復健康的藥膏繃帶",
         weight = 0.2,
         canBeDropped = true,
         canBeUsed = true,
@@ -68,319 +68,309 @@ Config.Items = {
         type = "item_standard"
     },
     ["WEAPON_REVOLVER_CATTLEMAN"] = {
-        label = "Cattleman Revolver",
-        description = "Cattleman Revolver",
+        label = "牛仔左輪手槍",
+        description = "牛仔左輪手槍",
         weight = 0.5,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_REVOLVER_CATTLEMAN"),
+        weaponHash = GetHashKey("WEAPON_REVOLVER_CATTLEMAN"),
         imgsrc = "items/WEAPON_REVOLVER_CATTLEMAN.png",
         type = "item_weapon"
     },
     ["WEAPON_REVOLVER_DOUBLEACTION"] = {
-        label = "DoubleAction",
-        description = "DoubleAction",
+        label = "雙動作手槍",
+        description = "雙動作手槍",
         weight = 0.5,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_REVOLVER_DOUBLEACTION"),
+        weaponHash = GetHashKey("WEAPON_REVOLVER_DOUBLEACTION"),
         imgsrc = "items/WEAPON_REVOLVER_DOUBLEACTION.png",
         type = "item_weapon"
     },
     ["WEAPON_REVOLVER_NAVY"] = {
-        label = "Navy Revolver",
-        description = "Navy Revolver",
+        label = "海軍左輪手槍",
+        description = "海軍左輪手槍",
         weight = 0.5,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_REVOLVER_NAVY"),
+        weaponHash = GetHashKey("WEAPON_REVOLVER_NAVY"),
         imgsrc = "items/weapon_revolver_navy.png",
         type = "item_weapon",
     },
     ["WEAPON_PISTOL_VOLCANIC"] = {
-        label = "Volcanic",
-        description = "Volcanic",
+        label = "火山手槍",
+        description = "火山手槍",
         weight = 0.5,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_PISTOL_VOLCANIC"),
+        weaponHash = GetHashKey("WEAPON_PISTOL_VOLCANIC"),
         imgsrc = "items/WEAPON_PISTOL_VOLCANIC.png",
         type = "item_weapon"
     },
     ["WEAPON_PISTOL_SEMIAUTO"] = {
-        label = "SemiAuto",
-        description = "SemiAuto",
+        label = "半自動手槍",
+        description = "半自動手槍",
         weight = 0.5,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_PISTOL_SEMIAUTO"),
+        weaponHash = GetHashKey("WEAPON_PISTOL_SEMIAUTO"),
         imgsrc = "items/WEAPON_PISTOL_SEMIAUTO.png",
         type = "item_weapon"
     },
-    ["WEAPON_PISTOL_MAUSER"] ={
-        label = "Mauser",
-        description = "Mauser",
+    ["WEAPON_PISTOL_MAUSER"] = {
+        label = "毛瑟手槍",
+        description = "毛瑟手槍",
         weight = 0.5,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_PISTOL_MAUSER"),
+        weaponHash = GetHashKey("WEAPON_PISTOL_MAUSER"),
         imgsrc = "items/WEAPON_PISTOL_MAUSER.png",
         type = "item_weapon"
     },
-    ["WEAPON_PISTOL_M1899"] ={
-        label = "M1899",
-        description = "M1899",
+    ["WEAPON_PISTOL_M1899"] = {
+        label = "M1899手槍",
+        description = "M1899手槍",
         weight = 0.5,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_PISTOL_M1899"),
+        weaponHash = GetHashKey("WEAPON_PISTOL_M1899"),
         imgsrc = "items/m1899.png",
         type = "item_weapon"
     },
-    ["WEAPON_REVOLVER_LEMAT"] ={
-        label = "Lemat",
-        description = "Lemat",
+    ["WEAPON_REVOLVER_LEMAT"] = {
+        label = "雷馬左輪手槍",
+        description = "雷馬左輪手槍",
         weight = 0.5,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_REVOLVER_LEMAT"),
+        weaponHash = GetHashKey("WEAPON_REVOLVER_LEMAT"),
         imgsrc = "items/WEAPON_REVOLVER_LEMAT.png",
         type = "item_weapon"
     },
     ["WEAPON_REVOLVER_SCHOFIELD"] = {
-        label = "Schofield",
-        description = "Schofield",
+        label = "斯科菲爾德左輪手槍",
+        description = "斯科菲爾德左輪手槍",
         weight = 0.7,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_REVOLVER_SCHOFIELD"),
+        weaponHash = GetHashKey("WEAPON_REVOLVER_SCHOFIELD"),
         imgsrc = "items/WEAPON_REVOLVER_SCHOFIELD.png",
         type = "item_weapon"
     },
     --REAPEATERS
     ["WEAPON_REPEATER_CARBINE"] = {
-        label = "Carbine",
-        description = "Carbine",
+        label = "卡賓步",
+        description = "卡賓步",
         weight = 0.9,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_REPEATER_CARBINE"),
+        weaponHash = GetHashKey("WEAPON_REPEATER_CARBINE"),
         imgsrc = "items/WEAPON_REPEATER_CARBINE.png",
         type = "item_weapon"
     },
     ["WEAPON_REPEATER_EVANS"] = {
-        label = "Evans",
-        description = "Evans",
+        label = "伊凡斯卡賓步",
+        description = "伊凡斯卡賓步",
         weight = 0.9,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_REPEATER_EVANS"),
+        weaponHash = GetHashKey("WEAPON_REPEATER_EVANS"),
         imgsrc = "items/WEAPON_REPEATER_EVANS.png",
         type = "item_weapon"
     },
     ["WEAPON_REPEATER_HENRY"] = {
-        label = "Henry",
-        description = "Henry",
+        label = "亨利卡賓步",
+        description = "亨利卡賓步",
         weight = 0.9,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_REPEATER_HENRY"),
+        weaponHash = GetHashKey("WEAPON_REPEATER_HENRY"),
         imgsrc = "items/WEAPON_REPEATER_HENRY.png",
         type = "item_weapon"
     },
     ["WEAPON_REPEATER_WINCHESTER"] = {
-        label = "Winchester",
-        description = "Winchester",
+        label = "溫徹斯特卡賓步",
+        description = "溫徹斯特卡賓步",
         weight = 0.9,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_REPEATER_WINCHESTER"),
+        weaponHash = GetHashKey("WEAPON_REPEATER_WINCHESTER"),
         imgsrc = "items/WEAPON_REPEATER_LANCASTER.png",
         type = "item_weapon"
     },
     --RIFLES
     ["WEAPON_RIFLE_VARMINT"] = {
-        label = "Varmint",
-        description = "Varmint",
+        label = "獵槍",
+        description = "獵槍",
         weight = 0.9,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_RIFLE_VARMINT"),
+        weaponHash = GetHashKey("WEAPON_RIFLE_VARMINT"),
         imgsrc = "items/WEAPON_RIFLE_VARMINT.png",
         type = "item_weapon"
     },
     ["WEAPON_RIFLE_BOLTACTION"] = {
-        label = "Bolt action",
-        description = "Bolt action",
+        label = "螺栓動作步槍",
+        description = "螺栓動作步槍",
         weight = 0.9,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_RIFLE_BOLTACTION"),
+        weaponHash = GetHashKey("WEAPON_RIFLE_BOLTACTION"),
         imgsrc = "items/WEAPON_RIFLE_BOLTACTION.png",
         type = "item_weapon"
     },
     ["WEAPON_SNIPERRIFLE_CARCANO"] = {
-        label = "Carcano",
-        description = "Carcano",
+        label = "卡爾卡諾狙擊步槍",
+        description = "卡爾卡諾狙擊步槍",
         weight = 0.9,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_SNIPERRIFLE_CARCANO"),
+        weaponHash = GetHashKey("WEAPON_SNIPERRIFLE_CARCANO"),
         imgsrc = "items/WEAPON_SNIPERRIFLE_CARCANO.png",
         type = "item_weapon"
     },
     ["WEAPON_SNIPERRIFLE_ROLLINGBLOCK"] = {
-        label = "Rolling block",
-        description = "Rolling block",
+        label = "滾簧槍狙擊步槍",
+        description = "滾簧槍狙擊步槍",
         weight = 0.9,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_SNIPERRIFLE_ROLLINGBLOCK"),
+        weaponHash = GetHashKey("WEAPON_SNIPERRIFLE_ROLLINGBLOCK"),
         imgsrc = "items/WEAPON_SNIPERRIFLE_ROLLINGBLOCK.png",
         type = "item_weapon"
     },
     ["WEAPON_RIFLE_SPRINGFIELD"] = {
-        label = "Springfield",
-        description = "Springfield",
+        label = "斯普林菲爾德步槍",
+        description = "斯普林菲爾德步槍",
         weight = 0.9,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_RIFLE_SPRINGFIELD"),
+        weaponHash = GetHashKey("WEAPON_RIFLE_SPRINGFIELD"),
         imgsrc = "items/WEAPON_RIFLE_SPRINGFIELD.png",
         type = "item_weapon"
     },
     --SHOTGUNS
     ["WEAPON_SHOTGUN_PUMP"] = {
-        label = "Pump",
-        description = "Pump",
+        label = "泵動霰彈槍",
+        description = "泵動霰彈槍",
         weight = 0.9,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_SHOTGUN_PUMP"),
+        weaponHash = GetHashKey("WEAPON_SHOTGUN_PUMP"),
         imgsrc = "items/WEAPON_SHOTGUN_PUMP.png",
         type = "item_weapon"
     },
     ["WEAPON_SHOTGUN_REPEATING"] = {
-        label = "Repeating shotgun",
-        description = "Repeating shotgun",
+        label = "重複霰彈槍",
+        description = "重複霰彈槍",
         weight = 0.9,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_SHOTGUN_REPEATING"),
+        weaponHash = GetHashKey("WEAPON_SHOTGUN_REPEATING"),
         imgsrc = "items/WEAPON_SHOTGUN_REPEATING.png",
         type = "item_weapon"
     },
     ["WEAPON_SHOTGUN_DOUBLEBARREL"] = {
-        label = "Doublebarrel",
-        description = "Doublebarrel",
+        label = "雙管霰彈槍",
+        description = "雙管霰彈槍",
         weight = 0.9,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_SHOTGUN_DOUBLEBARREL"),
+        weaponHash = GetHashKey("WEAPON_SHOTGUN_DOUBLEBARREL"),
         imgsrc = "items/WEAPON_SHOTGUN_DOUBLEBARREL.png",
         type = "item_weapon"
     },
     ["WEAPON_SHOTGUN_SAWEDOFF"] = {
-        label = "Sawed off",
-        description = "Sawed off",
+        label = "短管霰彈槍",
+        description = "短管霰彈槍",
         weight = 0.9,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_SHOTGUN_SAWEDOFF"),
+        weaponHash = GetHashKey("WEAPON_SHOTGUN_SAWEDOFF"),
         imgsrc = "items/WEAPON_SHOTGUN_SAWEDOFF.png",
         type = "item_weapon"
     },
     ["WEAPON_SHOTGUN_SEMIAUTO"] = {
-        label = "Semiauto Shotgun",
-        description = "Semiauto Shotgun",
+        label = "半自動霰彈槍",
+        description = "半自動霰彈槍",
         weight = 0.9,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_SHOTGUN_SEMIAUTO"),
+        weaponHash = GetHashKey("WEAPON_SHOTGUN_SEMIAUTO"),
         imgsrc = "items/WEAPON_SHOTGUN_SEMIAUTO.png",
         type = "item_weapon"
     },
     --MELEE WEAPONS
-    ["WEAPON_MELEE_HATCHET_HUNTER"] =
-	{
-		label = "Hunter Hatchet",
-		description = "Hunting Wild Animals",
-		weight = 1.0,
-		canBeDropped = true,
-		requireLvl = 1,
-		weaponHash = GetHashKey("WEAPON_MELEE_HATCHET_HUNTER"),
-		  imgsrc = "items/WEAPON_MELEE_HATCHET_HUNTER.png",
-		type = "item_weapon"
-	},
-    ["WEAPON_MELEE_HATCHET_DOUBLE_BIT"] =
-	{
-		label = "Double Bit Hatchet",
-		description = "Hunting Wild Animals",
-		weight = 1.0,
-		canBeDropped = true,
-		requireLvl = 1,
-		weaponHash = GetHashKey("WEAPON_MELEE_HATCHET_DOUBLE_BIT"),
-		imgsrc = "items/WEAPON_MELEE_HATCHET_DOUBLE_BIT.png",
-		type = "item_weapon"
-	},
-	["WEAPON_MELEE_CLEAVER"] =
-	{
-		label = "Cleaver",
-		description = "Keep out of reach of kids",
-		weight = 1.0,
-		canBeDropped = true,
-		requireLvl = 1,
-		weaponHash = GetHashKey("WEAPON_MELEE_CLEAVER"),
-		  imgsrc = "items/WEAPON_MELEE_CLEAVER.png",
-		type = "item_weapon"
-	},
-    ["WEAPON_MELEE_KNIFE_JAWBONE"] =
-	{
-		label = "Jawbone Knife",
-		description = "A symbol of designer tastes",
-		weight = 1.0,
-		canBeDropped = true,
-		requireLvl = 1,
-		weaponHash = GetHashKey("WEAPON_MELEE_KNIFE_JAWBONE"),
-		  imgsrc = "items/WEAPON_MELEE_KNIFE_JAWBONE.png",
-		type = "item_weapon"
-	},
-    ["WEAPON_MELEE_KNIFE_TRADER"] =
-	{
-		label = "Trader Knife",
-		description = "A symbol of designer tastes",
-		weight = 1.0,
-		canBeDropped = true,
-		requireLvl = 1,
-		weaponHash = GetHashKey("WEAPON_MELEE_KNIFE_TRADER"),
-		  imgsrc = "items/WEAPON_MELEE_KNIFE_TRADER.png",
-		type = "item_weapon"
-	},
-    ["WEAPON_MELEE_KNIFE_HORROR"] =
-	{
-		label = "Horror Knife",
-		description = "A symbol of designer tastes",
-		weight = 1.0,
-		canBeDropped = true,
-		requireLvl = 1,
-		weaponHash = GetHashKey("WEAPON_MELEE_KNIFE_HORROR"),
-		  imgsrc = "items/WEAPON_MELEE_KNIFE_HORROR.png",
-		type = "item_weapon"
-	},
-    ["WEAPON_MELEE_KNIFE_RUSTIC"] =
-	{
-		label = "Rustic Knife",
-		description = "A symbol of designer tastes",
-		weight = 1.0,
-		canBeDropped = true,
-		requireLvl = 1,
-		weaponHash = GetHashKey("WEAPON_MELEE_KNIFE_RUSTIC"),
-		  imgsrc = "items/WEAPON_MELEE_KNIFE_RUSTIC.png",
-		type = "item_weapon"
-	},
-    ["WEAPON_MELEE_MACHETE"] =
-    {
-        label = "Hunting Machete",
-        description = "A hunting machete",
+    ["WEAPON_MELEE_HATCHET_HUNTER"] = {
+        label = "獵人戰斧",
+        description = "用於狩獵野生動物",
+        weight = 1.0,
+        canBeDropped = true,
+        requireLvl = 1,
+        weaponHash = GetHashKey("WEAPON_MELEE_HATCHET_HUNTER"),
+        imgsrc = "items/WEAPON_MELEE_HATCHET_HUNTER.png",
+        type = "item_weapon"
+    },
+    ["WEAPON_MELEE_HATCHET_DOUBLE_BIT"] = {
+        label = "雙刃戰斧",
+        description = "用於狩獵野生動物",
+        weight = 1.0,
+        canBeDropped = true,
+        requireLvl = 1,
+        weaponHash = GetHashKey("WEAPON_MELEE_HATCHET_DOUBLE_BIT"),
+        imgsrc = "items/WEAPON_MELEE_HATCHET_DOUBLE_BIT.png",
+        type = "item_weapon"
+    },
+    ["WEAPON_MELEE_CLEAVER"] = {
+        label = "屠夫刀",
+        description = "切勿讓兒童接觸",
+        weight = 1.0,
+        canBeDropped = true,
+        requireLvl = 1,
+        weaponHash = GetHashKey("WEAPON_MELEE_CLEAVER"),
+        imgsrc = "items/WEAPON_MELEE_CLEAVER.png",
+        type = "item_weapon"
+    },
+    ["WEAPON_MELEE_KNIFE_JAWBONE"] = {
+        label = "顎骨刀",
+        description = "象徵高雅品味",
+        weight = 1.0,
+        canBeDropped = true,
+        requireLvl = 1,
+        weaponHash = GetHashKey("WEAPON_MELEE_KNIFE_JAWBONE"),
+        imgsrc = "items/WEAPON_MELEE_KNIFE_JAWBONE.png",
+        type = "item_weapon"
+    },
+    ["WEAPON_MELEE_KNIFE_TRADER"] = {
+        label = "商人刀",
+        description = "象徵高雅品味",
+        weight = 1.0,
+        canBeDropped = true,
+        requireLvl = 1,
+        weaponHash = GetHashKey("WEAPON_MELEE_KNIFE_TRADER"),
+        imgsrc = "items/WEAPON_MELEE_KNIFE_TRADER.png",
+        type = "item_weapon"
+    },
+    ["WEAPON_MELEE_KNIFE_HORROR"] = {
+        label = "恐怖刀",
+        description = "象徵高雅品味",
+        weight = 1.0,
+        canBeDropped = true,
+        requireLvl = 1,
+        weaponHash = GetHashKey("WEAPON_MELEE_KNIFE_HORROR"),
+        imgsrc = "items/WEAPON_MELEE_KNIFE_HORROR.png",
+        type = "item_weapon"
+    },
+    ["WEAPON_MELEE_KNIFE_RUSTIC"] = {
+        label = "鄉村刀",
+        description = "象徵高雅品味",
+        weight = 1.0,
+        canBeDropped = true,
+        requireLvl = 1,
+        weaponHash = GetHashKey("WEAPON_MELEE_KNIFE_RUSTIC"),
+        imgsrc = "items/WEAPON_MELEE_KNIFE_RUSTIC.png",
+        type = "item_weapon"
+    },
+    ["WEAPON_MELEE_MACHETE"] = {
+        label = "獵刀",
+        description = "獵刀",
         weight = 1,
         canBeDropped = true,
         requireLvl = 1,
         weaponHash = GetHashKey("WEAPON_MELEE_MACHETE"),
-          imgsrc = "items/WEAPON_MELEE_MACHETE.png",
+        imgsrc = "items/WEAPON_MELEE_MACHETE.png",
         type = "item_weapon"
     },
-    ["WEAPON_MELEE_MACHETE_HORROR"] =
-    {
-        label = "Horror Machete",
-        description = "A horror machete",
+    ["WEAPON_MELEE_MACHETE_HORROR"] = {
+        label = "恐怖獵刀",
+        description = "恐怖獵刀",
         weight = 1,
         canBeDropped = true,
         requireLvl = 1,
         weaponHash = GetHashKey("WEAPON_MELEE_MACHETE_HORROR"),
-          imgsrc = "items/WEAPON_MELEE_MACHETE_HORROR.png",
+        imgsrc = "items/WEAPON_MELEE_MACHETE_HORROR.png",
         type = "item_weapon"
     },
-    ["WEAPON_MELEE_MACHETE_COLLECTOR"] =
-    {
-        label = "Collector Machete",
-        description = "A collector machete",
+    ["WEAPON_MELEE_MACHETE_COLLECTOR"] = {
+        label = "收藏家獵刀",
+        description = "收藏家獵刀",
         weight = 1,
         canBeDropped = true,
         requireLvl = 1,
@@ -388,18 +378,9 @@ Config.Items = {
         imgsrc = "items/WEAPON_MELEE_MACHETE_COLLECTOR.png",
         type = "item_weapon"
     },
-    ["WEAPON_FISHINGROD"] = {
-        label = "Fishing Rod",
-        description = "Fishing Rod",
-        weight = 0.5,
-        canBeDropped = true,
-        weaponHash = GetHashKey("WEAPON_FISHINGROD"),
-        imgsrc = "items/weapon_fishingrod.png",
-        type = "item_weapon"
-    },
     ["WEAPON_MELEE_KNIFE"] = {
-        label = "Knife",
-        description = "Knife",
+        label = "小刀",
+        description = "小刀",
         weight = 0.5,
         canBeDropped = true,
         weaponHash = GetHashKey("WEAPON_MELEE_KNIFE"),
@@ -407,8 +388,8 @@ Config.Items = {
         type = "item_weapon"
     },
     ["WEAPON_MELEE_LANTERN"] = {
-        label = "Lantern",
-        description = "Lantern",
+        label = "提燈",
+        description = "提燈",
         weight = 0.5,
         canBeDropped = true,
         weaponHash = GetHashKey("WEAPON_MELEE_LANTERN"),
@@ -416,17 +397,17 @@ Config.Items = {
         type = "item_weapon"
     },
     ["WEAPON_MELEE_TORCH"] = {
-        label = "Torch",
-        description = "Torch",
+        label = "火炬",
+        description = "火炬",
         weight = 0.5,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_MELEE_TORCH"),
+        weaponHash = GetHashKey("WEAPON_MELEE_TORCH"),
         imgsrc = "items/WEAPON_MELEE_TORCH.png",
         type = "item_weapon"
     },
     ["WEAPON_LANTERN_ELECTRIC"] = {
-        label = "Electric Lantern",
-        description = "Electric Lantern",
+        label = "電動提燈",
+        description = "電動提燈",
         weight = 0.5,
         canBeDropped = true,
         weaponHash = GetHashKey("WEAPON_MELEE_LANTERN_ELECTRIC"),
@@ -434,17 +415,17 @@ Config.Items = {
         type = "item_weapon"
     },
     ["WEAPON_BOW"] = {
-        label = "Bow",
-        description = "Bow",
+        label = "弓",
+        description = "弓",
         weight = 0.25,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_BOW"),
+        weaponHash = GetHashKey("WEAPON_BOW"),
         imgsrc = "items/WEAPON_BOW.png",
         type = "item_weapon"
     },
     ["WEAPON_BOW_IMPROVED"] = {
-        label = "Improved Bow",
-        description = "Improved Bow",
+        label = "改進型弓",
+        description = "改進型弓",
         weight = 0.25,
         canBeDropped = true,
         weaponHash = GetHashKey("WEAPON_BOW_IMPROVED"),
@@ -452,65 +433,65 @@ Config.Items = {
         type = "item_weapon"
     },
     ["WEAPON_LASSO"] = {
-        label = "Lasso",
-        description = "Lasso",
+        label = "套索",
+        description = "套索",
         weight = 0.25,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_LASSO_REINFORCED"),
+        weaponHash = GetHashKey("WEAPON_LASSO_REINFORCED"),
         imgsrc = "items/WEAPON_LASSO.png",
         type = "item_weapon"
     },
     ["WEAPON_MELEE_HATCHET"] = {
-        label = "Hatchet",
-        description = "Hatchet",
+        label = "戰斧",
+        description = "戰斧",
         weight = 0.5,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_MELEE_HATCHET"),
+        weaponHash = GetHashKey("WEAPON_MELEE_HATCHET"),
         imgsrc = "items/WEAPON_MELEE_HATCHET.png",
         type = "item_weapon"
     },
     ["WEAPON_THROWN_THROWING_KNIVES"] = {
-        label = "Throwing knives",
-        description = "Throwing knives",
+        label = "飛刀",
+        description = "飛刀",
         weight = 0.5,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_THROWN_THROWING_KNIVES"),
+        weaponHash = GetHashKey("WEAPON_THROWN_THROWING_KNIVES"),
         imgsrc = "items/WEAPON_THROWN_THROWING_KNIVES.png",
         type = "item_weapon"
     },
     ["WEAPON_THROWN_TOMAHAWK"] = {
-        label = "Tomahawk",
-        description = "Tomahawk",
+        label = "戰斧",
+        description = "戰斧",
         weight = 0.5,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_THROWN_TOMAHAWK"),
+        weaponHash = GetHashKey("WEAPON_THROWN_TOMAHAWK"),
         imgsrc = "items/WEAPON_THROWN_TOMAHAWK.png",
         type = "item_weapon"
     },
     ["WEAPON_THROWN_DYNAMITE"] = {
-        label = "Dynamite stick",
-        description = "Dynamite stick",
+        label = "炸藥棒",
+        description = "炸藥棒",
         weight = 0.5,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_THROWN_DYNAMITE"),
+        weaponHash = GetHashKey("WEAPON_THROWN_DYNAMITE"),
         imgsrc = "items/WEAPON_THROWN_DYNAMITE.png",
         type = "item_weapon"
     },
     ["WEAPON_THROWN_MOLOTOV"] = {
-        label = "Molotov",
-        description = "Molotov",
+        label = "燃燒彈",
+        description = "燃燒彈",
         weight = 0.25,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_THROWN_MOLOTOV"),
+        weaponHash = GetHashKey("WEAPON_THROWN_MOLOTOV"),
         imgsrc = "items/WEAPON_THROWN_MOLOTOV.png",
         type = "item_weapon"
     },
     ["WEAPON_KIT_BINOCULARS"] = {
-        label = "Binoculars",
-        description = "Binoculars",
+        label = "望遠鏡",
+        description = "望遠鏡",
         weight = 0.25,
         canBeDropped = true,
-                weaponHash = GetHashKey("WEAPON_KIT_BINOCULARS"),
+        weaponHash = GetHashKey("WEAPON_KIT_BINOCULARS"),
         imgsrc = "items/WEAPON_KIT_BINOCULARS.png",
         type = "item_weapon"
     },
