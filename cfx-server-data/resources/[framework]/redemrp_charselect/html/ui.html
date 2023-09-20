@@ -44,8 +44,8 @@
 
 	<div class="bg" id="loading">
 		<div class="loading">
-			<div class="loadingtext">DRB Studios Project Server powered by <span style="color:#cf2e2e">REDEM:RP</span></div>
-			<div class="loadingsubtext"><span id="version"></span><br/><span id="loadingtext">Loading character data...</span></div>
+			<div class="loadingtext">唐仔街 RP 2023 技術支持: <span style="color:#cf2e2e"> REDEM:RP </span></div>
+			<div class="loadingsubtext"><span id="version"></span><br/><span id="loadingtext">加載角色數據...</span></div>
 		</div>
 	</div>
 
@@ -54,13 +54,13 @@
 	<div id="main">
 	</div>
 	<div id='creator'>
-		<input type='text' id='name' placeholder='First Name...' required maxlength="12" pattern="[A-Za-z]"
+		<input type='text' id='name' placeholder='名字...' required maxlength="12" pattern="[A-Za-z\u4e00-\u9fa5]+"
 			onkeypress="">
-		<input type='text' id='lastname' placeholder='Last Name...' required maxlength="16" pattern="[A-Za-z]"
+		<input type='text' id='lastname' placeholder='姓名...' required maxlength="16" pattern="[A-Za-z\u4e00-\u9fa5]+"
 			onkeypress="">
 		</br>
-		<button onclick="confirmNewCharacter()" class="create2">Create</button>
-		<button onclick="cancel()" class="cancel2">Cancel</button>
+		<button onclick="confirmNewCharacter()" class="create2">創建</button>
+		<button onclick="cancel()" class="cancel2">取消</button>
 	</div>
 	<script>		
 		randomNum = function(min, max) {
@@ -75,15 +75,15 @@
 				$("#version2").html(event.data.version);
 				setTimeout(function () {
 					$("#loadingtext").empty();
-					$("#loadingtext").html("Verifying character data...");
+					$("#loadingtext").html("檢查角色數據...");
 				}, getRandomInt(1000, 2000));
 				setTimeout(function () {
 					$("#loadingtext").empty();
-					$("#loadingtext").html("Loading server data...");
+					$("#loadingtext").html("加載角色數據...");
 				}, getRandomInt(4000, 6000));
 				setTimeout(function () {
 					$("#loadingtext").empty();
-					$("#loadingtext").html("Starting scripts...");
+					$("#loadingtext").html("啟動唐仔街RP 2023...");
 				}, getRandomInt(6000, 8000));
 			}
 			if (event.data.loading == false) {
@@ -147,9 +147,9 @@
 		function confirm(id) {
 			r.innerHTML = "";			
 			r.style.display = "block";
-			r.innerHTML += "<div id='pewien'>Are you sure? This action cannot be undone!</div></br>";
-			r.innerHTML += "<button id='confirm' onclick='delet(" + id + ")'>Confirm</buton>";
-			r.innerHTML += "<button id='cancelDeletion' onclick='cancelDeletion()'>Cancel</button>";
+			r.innerHTML += "<div id='pewien'>是否確定，該動作無法撤回</div></br>";
+			r.innerHTML += "<button id='confirm' onclick='delet(" + id + ")'>確定</buton>";
+			r.innerHTML += "<button id='cancelDeletion' onclick='cancelDeletion()'>取消</button>";
 		}
 
 		function cancelDeletion() {

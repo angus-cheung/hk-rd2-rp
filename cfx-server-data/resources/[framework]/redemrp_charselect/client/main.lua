@@ -74,10 +74,10 @@ OpenCharacterMenu = function()
             table.insert(elements, {label = "<strong>"..v.firstname .. " " .. v.lastname.."</strong>", desc = v.characterid, image="items/character_exists.png", value = v.characterid})
         end
     end
-    table.insert(elements, {label = "<strong>Create a New Character</strong>", desc = "Create a new character.", image="items/character_new.png", value = "new"})
+    table.insert(elements, {label = "<strong>創建角色</strong>", desc = "創建角色", image="items/character_new.png", value = "new"})
     MenuData.Open('default', GetCurrentResourceName(), 'charselect', {
-        title    = "REDEM:RP 2023",
-        subtext  = "Character Selection",
+        title    = "唐仔街:RP 2023",
+        subtext  = "角色選擇",
         align    = 'top-right',
         opacity  = '0.95',
         elements = elements,
@@ -91,18 +91,18 @@ OpenCharacterMenu = function()
                 })
                 SetNuiFocus(true, true)
             else
-                RedEM.Functions.NotifyLeft("Character Limit Reached!", "You can't have more than 4 characters!", "menu_textures", "menu_icon_alert", 3000)
+                RedEM.Functions.NotifyLeft("已經角色上限!", "你不能夠創建4個以上的角色", "menu_textures", "menu_icon_alert", 3000)
             end
         else
             print("Selecting character "..data.current.value)
             SelectingChar = data.current.value
             local elements = {
-                {label = "Select Character", desc = "Spawn into this character?", image="items/charsel_confirm.png",value = "select"},
-                {label = "Delete Character", desc = "Delete this character?", image="items/charsel_delete.png", value = "delete"}
+                {label = "選擇角色", desc = "是否選擇該名角色?", image="items/charsel_confirm.png",value = "select"},
+                {label = "刪除角色", desc = "是否選擇刪除角色?", image="items/charsel_delete.png", value = "delete"}
             }
             MenuData.Open('default', GetCurrentResourceName(), 'charselect2', {
-                title    = "REDEM:RP",
-                subtext  = "Character Selection",
+                title    = "唐仔街:RP 2023",
+                subtext  = "角色選擇",
                 align    = 'top-right',
                 opacity  = '0.95',
                 elements = elements,
@@ -113,12 +113,12 @@ OpenCharacterMenu = function()
                     TriggerServerEvent("redemrp:selectCharacter", SelectingChar)
                 elseif data.current.value == "delete" then
                     local elements = {
-                        {label = "<span style=\"color:red;\">Confirm Deletion</span>", desc = "Confirm deleting this character?", image="items/charsel_confirm.png", value = "confirm"},
-                        {label = "Cancel", desc = "Cancel deletion", image="items/charsel_cancel.png", value = "cancel"}
+                        {label = "<span style=\"color:red;\">確認刪除</span>", desc = "確認刪除改名角色?", image="items/charsel_confirm.png", value = "confirm"},
+                        {label = "取消", desc = "取消刪除", image="items/charsel_cancel.png", value = "cancel"}
                     }
                     MenuData.Open('default', GetCurrentResourceName(), 'charselect3', {
-                        title    = "REDEM:RP",
-                        subtext  = "Delete Character",
+                        title    = "唐仔街:RP 2023",
+                        subtext  = "刪除角色",
                         align    = 'top-right',
                         opacity  = '0.95',
                         elements = elements,
@@ -128,7 +128,7 @@ OpenCharacterMenu = function()
                             local charId = tonumber(SelectingChar)
                             MenuData.CloseAll()
 
-                            AddTextEntry("FMMC_MPM_TYP71", "\"confirm\" to delete your character ("..CharsList[charId].firstname.." "..CharsList[charId].lastname.."), ESC to cancel")
+                            AddTextEntry("FMMC_MPM_TYP71", "\"確認\" 刪除角色 ("..CharsList[charId].firstname.." "..CharsList[charId].lastname.."), 按 ESC 取消")
                             DisplayOnscreenKeyboard(0, "FMMC_MPM_TYP71", "", "", "", "", "", 30)
                             while (UpdateOnscreenKeyboard() == 0) do
                                 DisableAllControlActions(0)
